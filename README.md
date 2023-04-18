@@ -6,7 +6,7 @@
 
 ## Features
 
-- HTTP API, can be used via Postman or Thunderbird;
+- HTTP API, can be used via Postman or Thunder Client;
 - Uses in-memory cache to improve throughput;
 - PostgreSQL - the best database management system;
 - ANSI C;
