@@ -103,12 +103,12 @@ Can be confugured in config.txt (located in project folder)
 
 ### (C)Make source files
 1. Project main folder
-├── src
-│   ├── main.c
-│   ├── ...
-├── CMakeLists.txt
-├── config.txt
-├── Readme.md
+-src  
+    main.c  
+    ...  
+CMakeLists.txt  
+config.txt  
+Readme.md  
 
 2. Create build folder
     ```sh
