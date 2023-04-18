@@ -103,9 +103,9 @@ Can be confugured in config.txt (located in project folder)
 
 ### (C)Make source files
 1. Project main folder  
--src    
-    main.c  
-    ...  
+-src  
+  main.c    
+  ...  
 CMakeLists.txt  
 config.txt  
 Readme.md  
