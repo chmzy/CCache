@@ -6,7 +6,7 @@
 
 ## Features
 
-- HTTP API, can be used via Postman or Thunderbird;
+- HTTP API, can be used via Postman or Thunder Client;
 - Uses in-memory cache to improve throughput;
 - PostgreSQL - the best database management system;
 - ANSI C;
@@ -102,13 +102,13 @@ Can be confugured in config.txt (located in project folder)
 
 
 ### (C)Make source files
-1. Project main folder
-├── src
-│   ├── main.c
-│   ├── ...
-├── CMakeLists.txt
-├── config.txt
-├── Readme.md
+1. Project main folder  
+-src  
+* main.c    
+*  ...  
+CMakeLists.txt  
+config.txt  
+Readme.md  
 
 2. Create build folder
     ```sh
