@@ -1,5 +1,5 @@
 #pragma once
-#include "libpq-fe.h"
+#include <libpq-fe.h>
 
 PGconn* connect_to_db(char* user, char* password,  char* dbname);
 

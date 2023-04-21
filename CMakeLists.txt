@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_C_COMPILER "gcc")
 set(CMAKE_CXX_COMPILER "g++")
 
+include_directories("/usr/include/postgresql")
+include_directories("/usr/local/include/tarantool")
+
 project(pico C)
 
 # Add source files
