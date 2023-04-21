@@ -313,9 +313,17 @@ int main(int argc, char* argv) {
     /****************************************************************/
     // Connect to PostgreSQL database
     PGconn* psql_conn = connect_to_db(psql_username, psql_password, psql_dbname);
-
-    // Notify about PSQL database connection
-    printf("PostgreSQL database connected!\n");
+    
+    // Check PostgreSQL connection
+    if (PQstatus(psql_conn) != CONNECTION_OK) {
+        // Notify about PSQL database connection fail
+        fprintf(stderr, "Connection to database failed: %s\n", PQerrorMessage(psql_conn));
+        PQfinish(psql_conn);
+        exit(EXIT_FAILURE);
+    } else{
+        // Notify about PSQL database connected successfully
+        printf("PostgreSQL database connected!\n");
+    }
 
     // Intialize PSQL reuslt variable and SQL query array
     PGresult* res;
@@ -355,7 +363,7 @@ int main(int argc, char* argv) {
         struct tnt_reply reply;  
         tnt_reply_init(&reply); 
         tnt->read_reply(tnt, &reply);
-        printf("Error connecting to Tarantool! %lu\n %s\n", reply.code, reply.error);
+        printf("Error connecting to Tarantool!\n");
         tnt_reply_free(&reply);
 
         return 1;
