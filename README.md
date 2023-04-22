@@ -25,8 +25,12 @@ Before we proceed:
     ```sh
     sudo apt install postgresql postgresql-contrib
     ```
-2. Install [Tarantool](https://www.tarantool.io/en/download/os-installation/ubuntu/)
-3. Download and install [C client library](https://github.com/tarantool/tarantool-c) and [msgpuck library](https://github.com/tarantool/msgpuck)
+2. Install PostgreSQL library
+    ```sh
+    sudo apt-get install libpq-dev
+    ```
+3. Install [Tarantool](https://www.tarantool.io/en/download/os-installation/ubuntu/)
+4. Download and install [C client library](https://github.com/tarantool/tarantool-c) and [msgpuck library](https://github.com/tarantool/msgpuck)
 ### Initialize PostgreSQL
 0. If you cant login into Posgress, then follow this [guide](https://gist.github.com/AtulKsol/4470d377b448e56468baef85af7fd614)
 1. Start PostreSQL service
